@@ -11,4 +11,9 @@ module ApplicationHelper
   end
 
 
+  def logo
+    image_tag("logo.png", :alt => "RailsTest Logo", :class => "round")
+  end
+
+
 end

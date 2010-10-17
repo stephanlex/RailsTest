@@ -1,4 +1,6 @@
 RailsTest::Application.routes.draw do
+  #get "sessions/new"
+
   #get "users/new"
 
   #get "pages/home"
@@ -6,6 +8,8 @@ RailsTest::Application.routes.draw do
   #get "pages/about"
 
   resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
+
 
 
   # The priority is based upon order of creation:
@@ -20,6 +24,9 @@ RailsTest::Application.routes.draw do
   match '/help',    :to => 'pages#help'
 
   match '/signup',  :to => 'users#new'
+  match '/signin',  :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
+
 
 
   # Sample of named route:
