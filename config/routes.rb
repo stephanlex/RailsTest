@@ -1,7 +1,12 @@
 RailsTest::Application.routes.draw do
-  get "pages/home"
+  #get "users/new"
 
-  get "pages/about"
+  #get "pages/home"
+
+  #get "pages/about"
+
+  resources :users
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
